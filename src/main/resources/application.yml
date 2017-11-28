@@ -1,0 +1,19 @@
+spring.application.name: hello
+management.security.enabled: false
+management.port: 8081
+
+grpc:
+ enabled: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/warehouse
+    username: storer
+    password: foryoureyes
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+
+validation:
+  hostname: "localhost"
+  port: 7000

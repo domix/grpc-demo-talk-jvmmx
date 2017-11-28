@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "hello";
+option java_package = "com.circulosiete.cursos.k8s.hello";
+option java_outer_classname = "HelloProto";
+
+package com.circulosiete.cursos.k8s;
+
+// The greeting service definition.
+service HelloService {
+  // Streams a many greetings
+  rpc SayHello (HelloRequest) returns (stream HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
